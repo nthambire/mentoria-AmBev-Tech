@@ -1,0 +1,23 @@
+meta = 200
+
+class Vendedor():
+  def __init__(self, nome):
+    self.nome = nome
+    self.vendas = 0
+
+  def vendas_completas(self, vendas):
+    self.vendas = vendas
+  
+  def meta_batida(self, meta):
+    if self.vendas > meta:
+      print (self.nome, "parabéns pela meta batida!")
+    else:
+      print(self.nome, "não foi dessa vez :(")
+
+vendedor1 = Vendedor("Kaue")
+vendedor1.vendas_completas(1000)
+vendedor1.meta_batida(meta)
+
+vendedor2 = Vendedor("Vitor")
+vendedor2.vendas_completas(489)
+vendedor2.meta_batida(meta)
